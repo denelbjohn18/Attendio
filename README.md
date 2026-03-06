@@ -1,16 +1,36 @@
-# React + Vite
+VisionCheck: AI-Powered Attendance System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A professional, full-stack facial recognition attendance application built to bridge the gap between intermediate-level Machine Learning and modern Web Development.
 
-Currently, two official plugins are available:
+Overview
+This project automates the attendance process using real-time face detection and recognition. By combining a fluid React frontend with a robust Supabase backend, it provides a seamless experience for both administrators and users.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Tech Stack
+Frontend: React.js, Tailwind CSS, Framer Motion
+Backend: Supabase (Postgres, Auth, Real-time)
+ML/AI: Face Recognition Model / Google Antigravity
+Deployment: Vercel & GitHub
 
-## React Compiler
+Key Features
+Real-Time Detection: High-speed facial analysis and identification.
+Live Sync: Instant attendance logging with Supabase real-time subscriptions.
+Fluid UI: Elegant transitions and responsive layouts using Framer Motion.
+Secure Auth: Protected dashboard access for administrators.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Getting Started
+Installation Steps:
 
-## Expanding the ESLint configuration
+1.  Clone the repo.
+2.  Install dependencies via npm install.
+3.  Set up Environment Variables (Supabase URL and Anon Key).
+4.  Run the app via npm start.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+How It Works
+
+1.  The Vision Layer: The webcam captures frames which are processed by the ML model to extract facial embeddings.
+2.  The Logic Layer: These embeddings are compared against stored profiles in the database.
+3.  The Data Layer: Upon a match, Supabase triggers an insert into the attendance table, which reflects instantly on the dashboard.
+
+Future Scope
+Integration with deep learning models for mask detection.
+Exporting attendance reports to CSV/PDF.
